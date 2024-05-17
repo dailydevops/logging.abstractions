@@ -15,4 +15,8 @@
     <GlobalPackageReference Include="SonarAnalyzer.CSharp" Version="9.16.0.82469" Condition=" '$(BuildingInsideVisualStudio)' == 'true' " />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
+  </ItemGroup>
+
 </Project>
