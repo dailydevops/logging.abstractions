@@ -18,6 +18,6 @@ public readonly record struct LoggedMessage(
     LogLevel LogLevel,
     EventId EventId,
     string Message,
-    Exception? Exception,
-    IReadOnlyCollection<object?> Scopes
+    Exception? Exception = null,
+    IReadOnlyCollection<object?>? Scopes = null
 );
