@@ -17,6 +17,8 @@
     <PackageTags>$(PackageTags);logging;abstractions</PackageTags>
     <PackageProjectUrl>https://github.com/dailydevops/logging.abstractions.git</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dailydevops/logging.abstractions.git</RepositoryUrl>
+
+    <PackageReleaseNotes>$(PackageProjectUrl)/releases/</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
