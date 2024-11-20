@@ -6,13 +6,14 @@
 
   <PropertyGroup>
     <Title>$(MSBuildProjectName)</Title>
-    <Description>
+    <Description>Contains several abstractions for logging, based on the nuget package `Microsoft.Extensions.Logging.Abstractions`.</Description>
+    <Summary>
       Contains several abstractions for logging, based on the nuget package `Microsoft.Extensions.Logging.Abstractions`.
 
       - `LoggedMessage` represents a message that was logged.
       - `NullExternalScopeProvider` is a `IExternalScopeProvider` that does nothing.
       - `NullScope` is a `IDisposable` that does nothing.
-    </Description>
+    </Summary>
 
     <PackageTags>$(PackageTags);logging;abstractions</PackageTags>
     <PackageProjectUrl>https://github.com/dailydevops/logging.abstractions.git</PackageProjectUrl>
