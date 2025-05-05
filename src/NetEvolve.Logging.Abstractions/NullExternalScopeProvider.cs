@@ -8,9 +8,7 @@ using Microsoft.Extensions.Logging;
 /// </summary>
 public sealed class NullExternalScopeProvider : IExternalScopeProvider
 {
-    private static readonly Lazy<IExternalScopeProvider> _instance = new(
-        () => new NullExternalScopeProvider()
-    );
+    private static readonly Lazy<IExternalScopeProvider> _instance = new(() => new NullExternalScopeProvider());
 
     private NullExternalScopeProvider() { }
 
