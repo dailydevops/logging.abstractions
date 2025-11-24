@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11217.181 d18.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{16B12F89-FD02-463B-AB8A-3CEF10263BFC}"
 	ProjectSection(SolutionItems) = preProject
@@ -50,5 +50,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{69640616-9CA3-4200-BEB0-CCA07C343E2B} = {C155CC82-19F5-4362-9DF0-3C376BF5587B}
 		{766B8D41-B637-4572-A259-66FB4550F89C} = {AE17327A-3F21-42F0-B3F0-2B7D147BBA42}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04101536-35E8-41CD-AB86-3B096EC91E3E}
 	EndGlobalSection
 EndGlobal
