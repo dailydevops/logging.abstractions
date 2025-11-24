@@ -2,12 +2,11 @@
 
 using System;
 using Microsoft.Extensions.Logging;
-using Xunit;
 
 public class LoggedMessageTests
 {
-    [Fact]
-    public void Constructor_WithoutScopes_Expected()
+    [Test]
+    public async Task Constructor_WithoutScopes_Expected()
     {
         // Arrange
         var timestamp = DateTimeOffset.Now;
@@ -19,11 +18,14 @@ public class LoggedMessageTests
         var loggedMessage = new LoggedMessage(timestamp, logLevel, eventId, message);
 
         // Assert
-        Assert.Equal(timestamp, loggedMessage.Timestamp);
-        Assert.Equal(logLevel, loggedMessage.LogLevel);
-        Assert.Equal(eventId, loggedMessage.EventId);
-        Assert.Equal(message, loggedMessage.Message);
-        Assert.Null(loggedMessage.Exception);
-        Assert.Null(loggedMessage.Scopes);
+        using (Assert.Multiple())
+        {
+            _ = await Assert.That(loggedMessage.Timestamp).IsEqualTo(timestamp);
+            _ = await Assert.That(loggedMessage.LogLevel).IsEqualTo(logLevel);
+            _ = await Assert.That(loggedMessage.EventId).IsEqualTo(eventId);
+            _ = await Assert.That(loggedMessage.Message).IsEqualTo(message);
+            _ = await Assert.That(loggedMessage.Exception).IsNull();
+            _ = await Assert.That(loggedMessage.Scopes).IsNull();
+        }
     }
 }
