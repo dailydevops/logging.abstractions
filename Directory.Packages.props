@@ -14,7 +14,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.10" />
-    <PackageVersion Include="NetEvolve.Extensions.TUnit" Version="2.7.43" />
+    <PackageVersion Include="NetEvolve.Extensions.TUnit" Version="2.7.59" />
     <PackageVersion Include="TUnit" Version="1.2.11" />
   </ItemGroup>
 </Project>
