@@ -14,7 +14,7 @@ public sealed class NullScope : IDisposable
     /// </summary>
     public static IDisposable Instance => _instance.Value;
 
-    private NullScope() { }
+    internal NullScope() { }
 
     /// <inheritdoc cref="IDisposable.Dispose" />
     public void Dispose() { }

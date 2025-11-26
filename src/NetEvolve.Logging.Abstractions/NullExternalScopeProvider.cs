@@ -21,5 +21,5 @@ public sealed class NullExternalScopeProvider : IExternalScopeProvider
     public void ForEachScope<TState>(Action<object?, TState> callback, TState state) { }
 
     /// <inheritdoc cref="IExternalScopeProvider.Push(object?)" />
-    public IDisposable Push(object? state) => NullScope.Instance;
+    public IDisposable Push(object? state) => new NullScope();
 }

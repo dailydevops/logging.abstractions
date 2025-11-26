@@ -1,12 +1,13 @@
 <Project>
   <PropertyGroup>
-    <ProjectTargetFrameworks>net6.0;net8.0;net9.0;netstandard2.0</ProjectTargetFrameworks>
-    <TestTargetFrameworks>net6.0;net8.0;net9.0</TestTargetFrameworks>
-    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+    <ProjectTargetFrameworks>netstandard2.0;net8.0;net9.0;net10.0</ProjectTargetFrameworks>
+    <TestTargetFrameworks>net6.0;net8.0;net9.0;net10.0</TestTargetFrameworks>
     <CopyrightYearStart>2024</CopyrightYearStart>
+    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+    <CheckEolTargetFramework>false</CheckEolTargetFramework>
   </PropertyGroup>
   <PropertyGroup>
     <!-- Workaround, until https://github.com/GitTools/GitVersion/pull/4206 is released -->
-    <GitVersionTargetFramework>net8.0</GitVersionTargetFramework>
+    <GitVersionTargetFramework>net10.0</GitVersionTargetFramework>
   </PropertyGroup>
 </Project>
