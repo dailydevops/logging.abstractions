@@ -21,7 +21,7 @@ public class NullExternalScopeProviderTests
     {
         // Arrange
         var provider = NullExternalScopeProvider.Instance;
-        var state = new Dictionary<string, object?> { { "Hello World!", null } };
+        var state = new Dictionary<string, object?>(StringComparer.Ordinal) { { "Hello World!", null } };
 
         // Act
         _ = await Assert.That(() => provider.ForEachScope((_, _) => { }, state)).ThrowsNothing();
