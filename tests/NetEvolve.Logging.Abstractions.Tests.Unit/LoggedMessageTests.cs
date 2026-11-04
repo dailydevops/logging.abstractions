@@ -28,4 +28,29 @@ public class LoggedMessageTests
             _ = await Assert.That(loggedMessage.Scopes).IsNull();
         }
     }
+
+    [Test]
+    public async Task Constructor_WithExceptionAndScopes_Expected()
+    {
+        // Arrange
+        var exception = new InvalidOperationException();
+        var scopes = new object?[] { "a", null };
+
+        // Act
+        var loggedMessage = new LoggedMessage(
+            DateTimeOffset.Now,
+            LogLevel.Error,
+            new EventId(2, nameof(Constructor_WithExceptionAndScopes_Expected)),
+            "Hello World!",
+            exception,
+            scopes
+        );
+
+        // Assert
+        using (Assert.Multiple())
+        {
+            _ = await Assert.That(loggedMessage.Exception).IsSameReferenceAs(exception);
+            _ = await Assert.That(loggedMessage.Scopes).IsSameReferenceAs(scopes);
+        }
+    }
 }
